@@ -11,21 +11,43 @@
 </head>
 <body>
 
-<div id="loading-message" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;transition:opacity 0.7s;">
+<div id="loading-message" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:9999;display:flex;align-items:center;justify-content:center;background:#000;color:#fff;transition:opacity 0.7s;flex-direction:column;">
     <span id="loading-text" style="font-family:monospace;font-size:1.3rem;">
-        "La inteligencia es la habilidad de evitar hacer trabajo, y conseguir que el trabajo se haga"
+        "La 
+        <strong style="border:2.5px solid #a259ff; border-radius:18px; padding:2px 10px;">inteligencia</strong> 
+        es la habilidad de evitar hacer 
+        <strong style="border:2.5px solid #a259ff; border-radius:18px; padding:2px 10px;">trabajo,</strong> 
+        y conseguir que el trabajo 
+        <strong style="border:2.5px solid #a259ff; border-radius:18px; padding:2px 10px;">se haga."</strong>
     </span>
+    <div id="loading-dots" style="display:flex; width:70px; margin-top:2.2rem; justify-content:center; align-items:center; gap:0.7em;">
+        <span class="dot" style="opacity:0.3; font-size:2.2rem; transition:opacity 0.3s;">•</span>
+        <span class="dot" style="opacity:0.3; font-size:2.2rem; transition:opacity 0.3s;">•</span>
+        <span class="dot" style="opacity:0.3; font-size:2.2rem; transition:opacity 0.3s;">•</span>
+    </div>
 </div>
 <script>
-    // Sincroniza la animación y el efecto burbuja para una transición más profesional
+    // Animación de los tres puntos: de izquierda a derecha, uno a uno
     window.addEventListener('DOMContentLoaded', () => {
+        const dots = document.querySelectorAll('#loading-dots .dot');
+        let dotIndex = 0;
+        let direction = 1;
+        let dotInterval = setInterval(() => {
+            dots.forEach((dot, i) => dot.style.opacity = (i === dotIndex ? '1' : '0.3'));
+            dotIndex += direction;
+            if (dotIndex === dots.length) {
+                dotIndex = 0;
+            }
+        }, 400);
+
         const loading = document.getElementById('loading-message');
         setTimeout(() => {
             loading.style.opacity = '0';
             setTimeout(() => {
                 loading.style.display = 'none';
+                clearInterval(dotInterval);
                 createBubbleEffect();
-            }, 700); // coincide con el transition de opacity
+            }, 700);
         }, 2500);
     });
 
@@ -52,8 +74,8 @@
             bubble.style.width = `${size}px`;
             bubble.style.height = `${size}px`;
             bubble.style.borderRadius = '50%';
-            bubble.style.background = 'rgba(0,255,255,0.15)';
-            bubble.style.boxShadow = '0 0 10px 2px rgba(0,255,255,0.3)';
+            bubble.style.background = 'rgba(162,89,255,0.15)';
+            bubble.style.boxShadow = '0 0 10px 2px rgba(162,89,255,0.3)';
             bubble.style.opacity = Math.random() * 0.5 + 0.5;
             bubble.style.transition = 'transform 2.2s cubic-bezier(.17,.67,.83,.67), opacity 2.2s';
             bubbleContainer.appendChild(bubble);
