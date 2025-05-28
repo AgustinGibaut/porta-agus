@@ -21,17 +21,17 @@ body {
     }
 }
 
-/* Añade margen al texto principal */
+
 .terminal-content {
     background: #16161a;
     padding: 1.5rem 2rem 1rem;
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     min-height: 160px;
-    margin: 1.2rem 0; /* Margen superior e inferior */
+    margin: 1.2rem 0; 
 }
 
-/* Personalización de links */
+
 .terminal-content a,
 .terminal-contact-list a {
     color: #7f5af0;
@@ -46,7 +46,7 @@ body {
     background: none;
 }
 
-/* TERMINAL */
+
 
 .git-terminal-window {
     background: linear-gradient(135deg, #232946 70%, #393d6e 100%);
@@ -286,7 +286,7 @@ footer a {
 }
 
 footer a:hover {
-    color: #2cb67d;
+    color: #80948c;
     transform: translateY(-2px) scale(1.12);
 }
 
