@@ -271,6 +271,59 @@ section {
   font-size: 1rem;
 }
 
+.music-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 0 8px yellow;
+}
+
+.music-button {
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  color: yellow;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.music-button:hover {
+  color: white;
+  box-shadow: 0 0 10px white, 0 0 15px yellow;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .music-container {
+    width: 48px;
+    height: 48px;
+    bottom: 10px;
+    left: 10px;
+  }
+
+  .music-button {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+}
+
+
 .btn-primary {
   background: var(--gradient-primary);
   color: white;
