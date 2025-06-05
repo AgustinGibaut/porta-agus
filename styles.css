@@ -142,13 +142,71 @@ body {
   font-weight: 600;
   font-size: 1.2rem;
 }
-
 .navbar-toggler {
-  border: none;
-  padding: 0.5rem;
   width: 40px;
   height: 40px;
+  padding: 0.5rem;
   position: relative;
+
+  border: 2px solid #f59e0b;     /* Borde amarillo */
+  border-radius: 8px;
+  background-color: white;       /* Fondo blanco */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-toggler:hover {
+  background-color: #f59e0b;     /* Fondo amarillo al hover */
+  border-color: #f59e0b;
+  transform: scale(1.05);
+}
+
+.navbar-toggler:active {
+  transform: scale(0.95);
+}
+
+/* Las 3 líneas del hamburger */
+.navbar-toggler::before,
+.navbar-toggler::after,
+.navbar-toggler .middle-line {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: #f59e0b;     /* Líneas amarillas */
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+.navbar-toggler:hover::before,
+.navbar-toggler:hover::after,
+.navbar-toggler:hover .middle-line {
+  background-color: white;       /* Líneas blancas al hover */
+}
+
+.navbar-toggler .middle-line {
+  content: none;
+  margin: 3px 0;
+}
+
+/* Cuando está activo (clase .active) - forma X */
+.navbar-toggler.active::before {
+  transform: rotate(45deg) translate(0, 7px);
+}
+
+.navbar-toggler.active .middle-line {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.navbar-toggler.active::after {
+  transform: rotate(-45deg) translate(0, -7px);
 }
 
 .navbar-toggler span {
