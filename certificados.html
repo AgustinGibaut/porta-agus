@@ -3,108 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>📜 Certificados</title>
+  <title>📜 Certificados Profesionales</title>
   <link rel="stylesheet" href="certificados.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="background-grid"></div>
-  <main class="main-container">
+  <main class="container">
+    <!-- Header expandido -->
     <header class="header">
       <div class="logo">
-        <div class="logo-glow"></div>
-        <span class="logo-text">AG</span>
+        <div class="logo-pulse"></div>
       </div>
-      <h1 class="title">CERTIFICACIONES PROFESIONALES</h1>
-      <p class="subtitle"> En esta seccion encontraras Colección de logros académicos y profesionales que demuestran mi compromiso con el aprendizaje continuo y el desarrollo de habilidades en tecnologías emergentes.</p>
+      <h1 class="title">Certificaciones Profesionales</h1>
+      <p class="subtitle">
+        Explora mi trayectoria de aprendizaje continuo y desarrollo profesional. 
+        Cada certificación representa horas de dedicación, práctica y crecimiento 
+        en las tecnologías más demandadas del mercado actual.
+      </p>
+      <div class="stats">
+        <div class="stat-item">
+          <span class="stat-number">3</span>
+          <span class="stat-label">Certificaciones</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">2024-2025</span>
+          <span class="stat-label">Período</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-label">Completadas</span>
+        </div>
+      </div>
     </header>
 
-    <div class="inicio">
-      <li><a href="index.html">volver al inicio</a></li>
-    </div>
+    <!-- Navegación mejorada -->
+    <nav class="nav">
+      <a href="index.html" class="nav-link">
+        <i class="fas fa-arrow-left"></i>
+        <span>Volver al inicio</span>
+      </a>
+      <div class="nav-info">
+        <span class="nav-counter">Certificado <span id="currentCert">1</span> de 3</span>
+      </div>
+    </nav>
 
-    <section class="carousel-section">
+    <!-- Carrusel mejorado -->
+    <section class="carousel">
       <div class="carousel-container">
         <div class="carousel-track" id="carouselTrack">
-          <div class="carousel-slide">
-            <div class="certificate-card">
-              <div class="certificate-image">
-                <img src="image copy 7.png" alt="Certificado Arquitectura software - Código Facilito">
-                <div class="certificate-overlay">
-                  <span class="view-certificate">Ver Certificado</span>
+          
+          <div class="slide">
+            <div class="certificate">
+              <div class="cert-image">
+                <img src="image copy 7.png" alt="Certificado Arquitectura software">
+                <div class="cert-overlay">
+                  <div class="overlay-content">
+                    <i class="fas fa-eye"></i>
+                    <span>Ver certificado completo</span>
+                  </div>
                 </div>
               </div>
-              <div class="certificate-info">
-                <h2>🏗️ Arquitectura software</h2>
-                <p class="certificate-issuer">Código Facilito</p>
-                <p class="certificate-date">2025</p>
-                <div class="certificate-tags">
-                  <span class="tag">Frontend</span>
-                  <span class="tag">Diseño</span>
+              <div class="cert-info">
+                <div class="cert-header">
+                  <h3>🏗️ Arquitectura de Software</h3>
+                  <div class="cert-badge">Nuevo</div>
+                </div>
+                <p class="issuer">Código Facilito</p>
+                <p class="year">Completado en 2025</p>
+                <p class="description">
+                  Certificación avanzada en diseño y arquitectura de sistemas de software. 
+                  Incluye patrones de diseño, microservicios, escalabilidad y mejores prácticas 
+                  para el desarrollo de aplicaciones robustas y mantenibles.
+                </p>
+                <div class="skills">
+                  <h4>Habilidades adquiridas:</h4>
+                  <ul>
+                    <li>Patrones de arquitectura</li>
+                    <li>Diseño de microservicios</li>
+                    <li>Escalabilidad de sistemas</li>
+                    <li>Clean Architecture</li>
+                  </ul>
+                </div>
+                <div class="tags">
+                  <span>Frontend</span>
+                  <span>Backend</span>
+                  <span>Arquitectura</span>
+                  <span>Diseño</span>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="carousel-slide">
-            <div class="certificate-card">
-              <div class="certificate-image">
-                <img src="image copy 6.png" alt="Certificado IoT - ISPC">
-                <div class="certificate-overlay">
-                  <span class="view-certificate">Ver Certificado</span>
+
+          <div class="slide">
+            <div class="certificate">
+              <div class="cert-image">
+                <img src="image copy 6.png" alt="Certificado IoT">
+                <div class="cert-overlay">
+                  <div class="overlay-content">
+                    <i class="fas fa-eye"></i>
+                    <span>Ver certificado completo</span>
+                  </div>
                 </div>
               </div>
-              <div class="certificate-info">
-                <h2>🌐 Internet of Things</h2>
-                <p class="certificate-issuer">ISPC</p>
-                <p class="certificate-date">2024</p>
-                <div class="certificate-tags">
-                  <span class="tag">IoT</span>
-                  <span class="tag">Hardware</span>
+              <div class="cert-info">
+                <div class="cert-header">
+                  <h3>🌐 Internet of Things (IoT)</h3>
+                  <div class="cert-badge verified">Verificado</div>
+                </div>
+                <p class="issuer">Instituto Superior Politécnico Córdoba (ISPC)</p>
+                <p class="year">Completado en 2024</p>
+                <p class="description">
+                  Programa integral de Internet de las Cosas que abarca desde conceptos 
+                  fundamentales hasta implementación práctica. Desarrollo de proyectos 
+                  con sensores, actuadores, comunicación inalámbrica y plataformas cloud.
+                </p>
+                <div class="skills">
+                  <h4>Tecnologías dominadas:</h4>
+                  <ul>
+                    <li>Arduino y Raspberry Pi</li>
+                    <li>Protocolos de comunicación</li>
+                    <li>Sensores y actuadores</li>
+                    <li>Plataformas cloud IoT</li>
+                  </ul>
+                </div>
+                <div class="tags">
+                  <span>IoT</span>
+                  <span>Hardware</span>
+                  <span>Sensores</span>
+                  <span>Cloud</span>
                 </div>
               </div>
             </div>
           </div>
-          
-          <div class="carousel-slide">
-            <div class="certificate-card">
-              <div class="certificate-image">
+
+          <div class="slide">
+            <div class="certificate">
+              <div class="cert-image">
                 <img src="image copy 5.png" alt="Certificado Habilidades Blandas">
-                <div class="certificate-overlay">
-                  <span class="view-certificate">Ver Certificado</span>
+                <div class="cert-overlay">
+                  <div class="overlay-content">
+                    <i class="fas fa-eye"></i>
+                    <span>Ver certificado completo</span>
+                  </div>
                 </div>
               </div>
-              <div class="certificate-info">
-                <h2>🧠 Habilidades Blandas</h2>
-                <p class="certificate-issuer">ISPC</p>
-                <p class="certificate-date">2024</p>
-                <div class="certificate-tags">
-                  <span class="tag">Soft Skills</span>
-                  <span class="tag">Liderazgo</span>
+              <div class="cert-info">
+                <div class="cert-header">
+                  <h3>🧠 Habilidades Blandas</h3>
+                  <div class="cert-badge excellence">Excelencia</div>
+                </div>
+                <p class="issuer">Instituto Superior Politécnico Córdoba (ISPC)</p>
+                <p class="year">Completado en 2024</p>
+                <p class="description">
+                  Desarrollo integral de competencias interpersonales y profesionales. 
+                  Enfoque en comunicación efectiva, liderazgo, trabajo en equipo, 
+                  resolución de conflictos y adaptabilidad en entornos dinámicos.
+                </p>
+                <div class="skills">
+                  <h4>Competencias desarrolladas:</h4>
+                  <ul>
+                    <li>Comunicación asertiva</li>
+                    <li>Liderazgo de equipos</li>
+                    <li>Pensamiento crítico</li>
+                    <li>Gestión del tiempo</li>
+                  </ul>
+                </div>
+                <div class="tags">
+                  <span>Soft Skills</span>
+                  <span>Liderazgo</span>
+                  <span>Comunicación</span>
+                  <span>Teamwork</span>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-        
-        <button class="carousel-button prev" id="prevButton">
+
+       
+        <button class="carousel-btn prev" id="prevBtn">
           <i class="fas fa-chevron-left"></i>
+          <span class="btn-tooltip">Anterior</span>
         </button>
-        <button class="carousel-button next" id="nextButton">
+        <button class="carousel-btn next" id="nextBtn">
           <i class="fas fa-chevron-right"></i>
+          <span class="btn-tooltip">Siguiente</span>
         </button>
-        
-        <div class="carousel-indicators" id="carouselIndicators">
-          <span class="indicator active" data-index="0"></span>
-          <span class="indicator" data-index="1"></span>
-          <span class="indicator" data-index="2"></span>
+
+        <!-- Indicadores mejorados -->
+        <div class="indicators" id="indicators">
+          <span class="dot active" data-index="0">
+            <span class="dot-label">Arquitectura</span>
+          </span>
+          <span class="dot" data-index="1">
+            <span class="dot-label">IoT</span>
+          </span>
+          <span class="dot" data-index="2">
+            <span class="dot-label">Soft Skills</span>
+          </span>
         </div>
       </div>
     </section>
 
-   
+    
+
   </main>
 
-  <script src="certificados.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
